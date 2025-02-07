@@ -140,13 +140,18 @@ section {
   background: radial-gradient(circle, #e09c35, #e09c35); /* Change colors here */
 }
 
-.featured_item img[src="img/mr_logo.png"],
-.featured_item img[src="img/ai_logo.png"] {
+.featured_item img[src="img/mr_logo.png"] {
   width: 80%;
   height: auto;
   margin-left: 7px;
 }
 
+.featured_item img[src="img/ai_logo.png"] {
+  width: 90%;
+  height: auto;
+  margin-bottom: 25px;
+  margin-left: 7px;
+}
 
 .featured_item:after {
   content: "";
