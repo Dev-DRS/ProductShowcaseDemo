@@ -44,6 +44,9 @@ body {
     max-width: 400px; /* Matches model-viewer */
 }
 
+#previewModel {
+    cursor: pointer; /* Changes cursor to pointer */
+}
   
 model-viewer {
     display: block;

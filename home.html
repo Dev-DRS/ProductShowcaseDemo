@@ -31,15 +31,41 @@
   <!-- Section with 3 Model-Viewer compartments -->
   <section class="container">
     <div class="model-compartment">
-      <model-viewer src="assets/models/Air Compressor_v1.glb" alt="3D Model 2" auto-rotate camera-controls></model-viewer></model-viewer>
+      <model-viewer id="previewModel" src="assets/models/Air Compressor_v1.glb" alt="3D Model 2" auto-rotate disable-pan disable-zoom interaction-prompt="none" data-url="air.html"></model-viewer>
     </div>
     <div class="model-compartment">
-      <model-viewer src="assets/models/Jet Engine 01.glb" alt="3D Model 2" auto-rotate camera-controls></model-viewer>
+      <model-viewer id="previewModel" src="assets/models/Jet Engine 01.glb" alt="3D Model 2" auto-rotate disable-pan disable-zoom interaction-prompt="none" data-url="jet.html"></model-viewer>
     </div>
     <div class="model-compartment">
-      <model-viewer src="assets/models/Motorcycle_Engine_v1.glb" alt="3D Model 3" auto-rotate camera-controls></model-viewer>
+      <model-viewer id="previewModel" src="assets/models/Motorcycle_Engine_v1.glb" alt="3D Model 2" auto-rotate disable-pan disable-zoom interaction-prompt="none" data-url="motor.html"></model-viewer>
     </div>
   </section>
   </main>
+
+  <!-- Redirect to full control page -->
+  <script>    
+    document.addEventListener("DOMContentLoaded", function() {  
+      const models = document.querySelectorAll("#previewModel");
+      
+      console.log("Found models:", models.length); // Debugging log
+
+      models.forEach(model => {
+          model.addEventListener("click", function () {
+              const targetUrl = this.getAttribute("data-url");
+
+              console.log("Model clicked:", this.src); // Debugging log
+
+              if (targetUrl) {
+                  window.location.href = targetUrl;
+              } else {
+                  console.error("No data-url found for this model.");
+                  alert("No data-url found!");
+              }
+          });
+      });
+  });
+
+  </script>
+
 </body>
 </html>
