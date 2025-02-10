@@ -94,9 +94,18 @@ section {
 }
 
 .hero {
+
   color: white;
   text-align: center;
-  padding: 25em 0;
+  padding: 10em 0; /* Reduced padding */
+  min-height: 100vh; /* Ensures it covers the full viewport */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  /* padding: 25em 0; */
   /* background: #222; */
 
   /* @supports (background-blend-mode: multiply) { */
