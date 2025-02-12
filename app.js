@@ -21,46 +21,46 @@ function toggleSidebar(){
   closeAllSubMenus()
 }
 
-// function toggleSubMenu(button){
+function toggleSubMenu(button){
 
-//   // if(!button.nextElementSibling.classList.contains('show')){
-//   //   closeAllSubMenus()
-//   // }
+  // if(!button.nextElementSibling.classList.contains('show')){
+  //   closeAllSubMenus()
+  // }
 
-//   // button.nextElementSibling.classList.toggle('show')
-//   // button.classList.toggle('rotate')
+  // button.nextElementSibling.classList.toggle('show')
+  // button.classList.toggle('rotate')
 
-//   // if(sidebar.classList.contains('close')){
-//   //   sidebar.classList.toggle('close')
-//   //   toggleButton.classList.toggle('rotate')
-//   // }
-//   const parentSubMenu = button.closest('ul.sub-menu');
+  // if(sidebar.classList.contains('close')){
+  //   sidebar.classList.toggle('close')
+  //   toggleButton.classList.toggle('rotate')
+  // }
+  const parentSubMenu = button.closest('ul.sub-menu');
 
-//   // Close only submenus that are not in the current hierarchy
-//   Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-//     if (!parentSubMenu || !parentSubMenu.contains(ul)) {
-//       ul.classList.remove('show');
-//       ul.previousElementSibling.classList.remove('rotate');
-//     }
-//   });
-
-//   // Toggle the clicked menu
-//   button.nextElementSibling.classList.toggle('show');
-//   button.classList.toggle('rotate');
-
-//   // Open sidebar if it's closed
-//   if (sidebar.classList.contains('close')) {
-//     sidebar.classList.remove('close');
-//     toggleButton.classList.toggle('rotate');
-//   }
-// }
-
-document.querySelectorAll('.dropdown-btn').forEach(button => {
-  button.addEventListener('click', () => {
-      const submenu = button.nextElementSibling;
-      submenu.classList.toggle('show');
+  // Close only submenus that are not in the current hierarchy
+  Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
+    if (!parentSubMenu || !parentSubMenu.contains(ul)) {
+      ul.classList.remove('show');
+      ul.previousElementSibling.classList.remove('rotate');
+    }
   });
-});
+
+  // Toggle the clicked menu
+  button.nextElementSibling.classList.toggle('show');
+  button.classList.toggle('rotate');
+
+  // Open sidebar if it's closed
+  if (sidebar.classList.contains('close')) {
+    sidebar.classList.remove('close');
+    toggleButton.classList.toggle('rotate');
+  }
+}
+
+// document.querySelectorAll('.dropdown-btn').forEach(button => {
+//   button.addEventListener('click', () => {
+//       const submenu = button.nextElementSibling;
+//       submenu.classList.toggle('show');
+//   });
+// });
 
 function toggleSubMenu(button) {
   const subMenu = button.nextElementSibling;
