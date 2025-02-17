@@ -29,9 +29,15 @@
   <nav id="sidebar">
     <ul>
       <li>
-        <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+        <span class="logo">DRS Products</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
+        </button>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
-          <span>INTERACTIVE WEB</span>
+          <span>IMMERSIVE WEB</span>
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
         </button>
         <ul class="sub-menu">
@@ -43,7 +49,7 @@
         </ul>
       </li>
     </ul>
-</nav>
+  </nav>
 
 
  <model-viewer id="hotspot-camera-view-demo" src="./assets/models/Motorcycle_Engine_v1.glb" alt="Thor and the Midgard Serpent" camera-controls enable-pan touch-action="none" camera-orbit="180deg 70.11deg auto" camera-target="0m 0.5m .0.7m" field-of-view="45deg" min-field-of-view="45deg" max-field-of-view="45deg" interpolation-decay="200" min-camera-orbit="auto auto 5%" poster="../../assets/SketchfabModels/ThorAndTheMidgardSerpent.webp" ar ar-modes="webxr scene-viewer quick-look">
@@ -97,10 +103,6 @@ style="display: block;"
 onclick="Reset('info-panel_9','info-panel_8','info-panel_7')">
 Reset
 </button>
- 
 </model-viewer>
-
-
-
 </body>
 </html>

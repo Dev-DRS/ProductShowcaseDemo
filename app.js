@@ -23,65 +23,16 @@ function toggleSidebar(){
 
 function toggleSubMenu(button){
 
-  // if(!button.nextElementSibling.classList.contains('show')){
-  //   closeAllSubMenus()
-  // }
-
-  // button.nextElementSibling.classList.toggle('show')
-  // button.classList.toggle('rotate')
-
-  // if(sidebar.classList.contains('close')){
-  //   sidebar.classList.toggle('close')
-  //   toggleButton.classList.toggle('rotate')
-  // }
-  const parentSubMenu = button.closest('ul.sub-menu');
-
-  // Close only submenus that are not in the current hierarchy
-  Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-    if (!parentSubMenu || !parentSubMenu.contains(ul)) {
-      ul.classList.remove('show');
-      ul.previousElementSibling.classList.remove('rotate');
-    }
-  });
-
-  // Toggle the clicked menu
-  button.nextElementSibling.classList.toggle('show');
-  button.classList.toggle('rotate');
-
-  // Open sidebar if it's closed
-  if (sidebar.classList.contains('close')) {
-    sidebar.classList.remove('close');
-    toggleButton.classList.toggle('rotate');
+  if(!button.nextElementSibling.classList.contains('show')){
+    closeAllSubMenus()
   }
-}
 
-// document.querySelectorAll('.dropdown-btn').forEach(button => {
-//   button.addEventListener('click', () => {
-//       const submenu = button.nextElementSibling;
-//       submenu.classList.toggle('show');
-//   });
-// });
+  button.nextElementSibling.classList.toggle('show')
+  button.classList.toggle('rotate')
 
-function toggleSubMenu(button) {
-  const subMenu = button.nextElementSibling;
-
-  // If the clicked submenu is already open, close it
-  if (subMenu.classList.contains('show')) {
-    subMenu.classList.remove('show');
-    button.classList.remove('rotate');
-  } else {
-    // Close all other submenus before opening the clicked one
-    closeAllSubMenus();
-
-    // Open the clicked submenu
-    subMenu.classList.add('show');
-    button.classList.add('rotate');
-
-    // Open sidebar if it's closed
-    if (sidebar.classList.contains('close')) {
-      sidebar.classList.remove('close');
-      toggleButton.classList.toggle('rotate');
-    }
+  if(sidebar.classList.contains('close')){
+    sidebar.classList.toggle('close')
+    toggleButton.classList.toggle('rotate')
   }
 }
 
@@ -90,8 +41,7 @@ function closeAllSubMenus(){
     ul.classList.remove('show')
     ul.previousElementSibling.classList.remove('rotate')
   })
-}
-function LoadModelViewer(){
+}function LoadModelViewer(){
  print("neil") ;
 }
 
