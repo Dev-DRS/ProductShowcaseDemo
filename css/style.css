@@ -424,7 +424,7 @@ model-viewer {
 
 		ul li .sub-menu {
 			position: fixed;
-			top: 540px;
+			top: 81%;
 			left: 0;
 			box-sizing: border-box;
 			height: 70px;
