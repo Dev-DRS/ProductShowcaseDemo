@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>DRS - Jet Engine</title>
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="app.js" defer></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
@@ -21,36 +21,14 @@
       console.log("hello hotspot", hotspot);
       hotspot.addEventListener('click', () => annotationClicked(hotspot));
     });
+  // Check PDF AND VIDEO LINKS
+    document.getElementById("open-pdf-btn").addEventListener("click", function() {
+      window.open("assets/documents/Jet_Engine.pdf", "_blank");
+    });
 
-    // const modelViewer1 = document.querySelector("#hotspot-camera-view-demo");
-
-    // // Store the default camera orbit for resetting later
-    // const defaultCameraOrbit = modelViewer1.getAttribute("camera-orbit");
-    // const defaultCameraTarget = modelViewer1.getAttribute("camera-target");
-    // let resetOrbitTimeout;
-
-    // // Focus on the info panel and reset after a delay
-    // const annotationClicked = (annotation) => {
-    //   let dataset = annotation.dataset;
-
-    //   // Clear any existing timeout to avoid multiple resets
-    //   clearTimeout(resetOrbitTimeout);
-
-    //   // Set camera orbit to focus on the info panel
-    //   modelViewer1.cameraOrbit = dataset.orbit;
-    //   modelViewer1.cameraTarget = dataset.target;
-
-    //   // Reset orbit after 5 seconds
-    //   resetOrbitTimeout = setTimeout(() => {
-    //     //modelViewer1.cameraOrbit = defaultCameraOrbit;
-    //     modelViewer1.cameraTarget = defaultCameraTarget;
-    //   }, 5000); // 5000 ms = 5 seconds
-    // };
-
-    // // Attach click event listeners to hotspots
-    // modelViewer1.querySelectorAll('button').forEach((hotspot) => {
-    //   hotspot.addEventListener('click', () => annotationClicked(hotspot));
-    // });
+    document.getElementById("open-video-button").addEventListener("click", function() {
+      window.open("https://www.youtube.com/watch?v=L24Wf0VlTE0", "_blank");
+    });
   </script>
 
 
@@ -81,6 +59,8 @@
   </ul>
 </nav>
 
+<button id="open-pdf-btn">Open PDF</button>
+<button id="open-video-button">Watch Video</button>
 
 <model-viewer id="hotspot-camera-view-demo" src="./assets/models/jet_Engine_01.glb" alt="Thor and the Midgard Serpent" camera-controls enable-pan touch-action="none" camera-orbit="180deg 70.11deg auto" camera-target="1m 4m 1m" field-of-view="45deg" min-field-of-view="45deg" max-field-of-view="45deg" interpolation-decay="200" min-camera-orbit="auto auto 5%" poster="../../assets/SketchfabModels/ThorAndTheMidgardSerpent.webp" ar ar-modes="webxr scene-viewer quick-look">
 
@@ -113,8 +93,6 @@ style="display: none;">
 </div>
 
 
-
-
 <button class="view-button" slot="hotspot-8" data-position="1.1m 4m 0m" data-normal="0m 0m -1m" data-orbit="-160.3926deg 90.45934deg 0.5m" data-target="0m 4m -4m"  onclick="toggleInfoPanel_6()">
   Combustion Chamber
 </button> 
@@ -135,7 +113,6 @@ style="display: block;"
 onclick="Reset('info-panel_4','info-panel_5','info-panel_6')">
 Reset
 </button>
-
-
+</model-viewer>
 </body>
 </html>

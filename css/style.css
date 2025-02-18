@@ -300,6 +300,44 @@ model-viewer {
 	transform: translate3d(-50%, -50%, 0);
 }
 
+/* PDF AND VIDEO BUTTON CSS */
+#open-pdf-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 10px 15px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	z-index: 10;
+  }
+
+#open-pdf-btn:hover {
+	background-color: #0056b3;
+  }
+
+#open-video-button {
+	position: absolute;
+	top: 60px;
+	right: 10px;
+	padding: 10px 15px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	z-index: 10;
+  }
+
+#open-video-button:hover {
+	background-color: #0056b3;
+  }
+/* PDF AND VIDEO BUTTON CSS */
+
 @media(max-width: 900px) {
 
 	body{

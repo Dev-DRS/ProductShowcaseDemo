@@ -1,7 +1,7 @@
 const toggleButton = document.getElementById('toggle-btn')
 const sidebar = document.getElementById('sidebar')
 
-
+// Model Viewer js
 const modelViewer = document.querySelector('#hotspot-camera-view-demo');
 const infoBox = document.getElementById('info-box');
 const infoText = document.getElementById('info-text');
@@ -13,7 +13,9 @@ $("#hotspot-camera-view-demo").on("click", function() {
   }
 });
 
+// Model Viewer js
 
+// UI scripts
 function toggleSidebar(){
   sidebar.classList.toggle('close')
   toggleButton.classList.toggle('rotate')
@@ -41,6 +43,9 @@ function closeAllSubMenus(){
     ul.classList.remove('show')
     ul.previousElementSibling.classList.remove('rotate')
   })
+
+// UI scripts
+
 }function LoadModelViewer(){
  print("neil") ;
 }

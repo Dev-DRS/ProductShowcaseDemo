@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>DRS - Air Compressor</title>
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="app.js" defer></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
@@ -20,6 +20,14 @@
     modelViewer1.querySelectorAll('button').forEach((hotspot) => {
       console.log("hello hotspot", hotspot);
       hotspot.addEventListener('click', () => annotationClicked(hotspot));
+    });
+    // Check PDF AND VIDEO LINKS
+    document.getElementById("open-pdf-btn").addEventListener("click", function() {
+      window.open("assets/documents/Air_Compressor.pdf", "_blank");
+    });
+
+    document.getElementById("open-video-button").addEventListener("click", function() {
+      window.open("https://www.youtube.com/watch?v=Ineyo7s27lo", "_blank");
     });
     
   </script>
@@ -50,6 +58,9 @@
       </li>
     </ul>
   </nav>
+
+  <button id="open-pdf-btn">Open PDF</button>
+  <button id="open-video-button">Watch Video</button>
 
   <model-viewer id="hotspot-camera-view-demo"  src="./assets/models/Air Compressor_v1.glb" alt="Thor and the Midgard Serpent" camera-controls enable-pan touch-action="none" camera-orbit="180deg 70.11deg auto" camera-target="1m 1m 1m" field-of-view="45deg" min-field-of-view="45deg" max-field-of-view="45deg" interpolation-decay="200" min-camera-orbit="auto auto 5%" poster="../../assets/SketchfabModels/ThorAndTheMidgardSerpent.webp" ar ar-modes="webxr scene-viewer quick-look">
     <button slot="ar-button" id="ar-button">
